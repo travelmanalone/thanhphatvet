@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HỆ THỐNG THÚ Y THÀNH PHÁT - Chăm Sóc Thú Cưng Tận Tâm</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#14b8a6", // Teal
+                        "accent": "#f97316",  // Orange
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .emergency-pulse {
+            animation: pulse-red 2s infinite;
+        }
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0); }
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 10px;
+        }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #334155;
+        }
+        .marquee-footer {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 transition-colors duration-300">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-6 lg:px-10 py-3 sticky top-0 z-50">
+<div class="flex items-center gap-3">
+<div class="flex flex-col">
+<h2 class="text-primary text-lg lg:text-xl font-black leading-tight tracking-tight uppercase">Hệ Thống Thú Y Thành Phát</h2>
+<span class="text-[10px] text-accent font-bold tracking-[0.2em] uppercase">Chuyên nghiệp - Tận tâm</span>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#">Trang chủ</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#dich-vu">Dịch vụ</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#he-thong-co-so">Hệ Thống Cơ Sở</a>
+<a class="text-slate-600 dark:text-slate-300 text-sm font-semibold hover:text-primary transition-colors" href="#bac-si">Đội Ngũ</a>
+</nav>
+<div class="flex gap-3">
+<div class="hidden sm:flex flex-col items-end justify-center mr-2">
+<span class="text-[10px] font-bold text-slate-400 uppercase">Giờ làm việc</span>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-200">8:00 - 20:00</span>
+</div>
+<a class="emergency-pulse flex items-center gap-2 bg-red-600 text-white px-4 py-2 rounded-full text-sm font-black hover:bg-red-700 transition-colors" href="tel:0935365896">
+<span class="uppercase">CẤP CỨU</span>
+</a>
+</div>
+</div>
+</header>
+<main class="flex-1">
+<div class="px-4 lg:px-10 flex justify-center py-10 lg:py-20 bg-gradient-to-br from-teal-50 to-white dark:from-slate-900 dark:to-slate-800">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<div class="@container">
+<div class="flex flex-col gap-10 @[864px]:flex-row items-center">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-3xl shadow-2xl border-4 border-white dark:border-slate-700 @[864px]:w-1/2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgyGVOM7wUZoRIeBnshtOkUWUfhX8wkqHm6wJ2J7MrFXeWdlsq4RjTDmvhzdSbEf1kItTLJnRDbLOejW4gBwDw17SGsmjMA8jpk4UTWUMU0o_Ixo8qIp-ApoZtyEmZks6BZMEVuzMOc-PYTFrhAc2gB5WbPHUkGHS-JNUw1QY4S2bnbbpjgt3Vvg2Z4MdBbcREpfdr_b_Tcgr7FkcwVFbusnVJHR5ewFZRa88YG7LADI9i1350qJU_NVpmaM2cZSr4DB2TqIRMiqY");'>
+</div>
+<div class="flex flex-col gap-6 @[864px]:w-1/2">
+<div class="flex flex-col gap-4">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-accent/10 text-accent w-fit font-bold text-xs uppercase tracking-widest">
+                                        Hệ thống 4 cơ sở tại Bình Định
+                                    </div>
+<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-tight @[480px]:text-6xl">
+                                        Chăm Sóc Thú Cưng <span class="text-primary">Tận Tâm</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-relaxed">
+                                        Hệ Thống Thú Y Thành Phát tự hào là địa chỉ tin cậy hàng đầu cho thú cưng của bạn. Với trang thiết bị hiện đại và đội ngũ y bác sĩ giàu kinh nghiệm, chúng tôi cam kết mang lại sự an tâm tuyệt đối.
+                                    </p>
+</div>
+<div class="flex flex-wrap gap-4">
+<a class="flex min-w-[180px] cursor-pointer items-center justify-center rounded-xl h-14 px-8 bg-primary text-white text-base font-bold shadow-xl shadow-teal-500/20 hover:scale-105 transition-transform" href="tel:0935365896">
+                                        Liên Hệ
+                                    </a>
+<a class="flex items-center gap-3 px-6 h-14 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 hover:border-primary transition-colors" href="mailto:tanphatvet@gmail.com">
+<span class="material-symbols-outlined text-primary">mail</span>
+<span class="text-sm font-bold">Email Ngay</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="py-20" id="dich-vu">
+<div class="px-4 lg:px-10 flex justify-center">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<div class="text-center mb-16">
+<h2 class="text-slate-900 dark:text-white text-3xl font-black @[480px]:text-4xl mb-4 uppercase">Dịch Vụ Chuyên Khoa</h2>
+<p class="text-slate-500 max-w-2xl mx-auto">Chúng tôi cung cấp các giải pháp y tế toàn diện với công nghệ hiện đại nhất dành cho thú cưng của bạn.</p>
+<div class="w-20 h-1.5 bg-accent mx-auto rounded-full mt-4"></div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-16 h-16 bg-teal-50 dark:bg-teal-900/30 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">child_care</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Phẫu Thuật Mổ Đẻ Thú Cưng</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Hỗ trợ sinh sản an toàn, đảm bảo sức khỏe cho cả mẹ và con với quy trình vô trùng tuyệt đối.</p>
+</div>
+<div class="group p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-16 h-16 bg-orange-50 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">medical_services</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Phẫu Thuật Triệt Sản</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Dịch vụ triệt sản thẩm mỹ, phục hồi nhanh chóng giúp giảm thiểu các bệnh lý nguy hiểm.</p>
+</div>
+<div class="group p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-16 h-16 bg-teal-50 dark:bg-teal-900/30 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">orthopedics</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Phẫu Thuật Xương Khớp</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Điều trị chấn thương chỉnh hình, đóng đinh nội tủy và các vấn đề về vận động chuyên sâu.</p>
+</div>
+<div class="group p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-16 h-16 bg-orange-50 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">self_care</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Spa - Grooming Thú Cưng</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Tắm vệ sinh, cắt tỉa lông thẩm mỹ theo yêu cầu, giúp thú cưng sạch sẽ và tự tin hơn.</p>
+</div>
+<div class="group p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-16 h-16 bg-teal-50 dark:bg-teal-900/30 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">radar</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Siêu Âm Thú Cưng</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Chẩn đoán hình ảnh chính xác các bệnh lý nội tạng, kiểm tra thai kỳ định kỳ.</p>
+</div>
+<div class="group p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all">
+<div class="w-16 h-16 bg-orange-50 dark:bg-orange-900/30 rounded-2xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-4xl">vaccines</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Tiêm Phòng &amp; Tẩy Giun</h3>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Đầy đủ các loại vaccine 5 bệnh, 7 bệnh và phòng dại chất lượng cao.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-red-600 py-12 text-white">
+<div class="px-4 lg:px-10 flex justify-center">
+<div class="max-w-[1200px] w-full flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<div class="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl">e911_emergency</span>
+</div>
+<div>
+<h2 class="text-3xl font-black uppercase tracking-tight">Dịch Vụ Cấp Cứu 24/24</h2>
+<p class="text-red-100 text-lg">Hỗ trợ khẩn cấp mọi lúc, mọi nơi khi thú cưng cần chúng tôi.</p>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2">
+<span class="text-sm font-bold uppercase tracking-widest text-red-200">Hotline Cấp Cứu</span>
+<a class="text-4xl font-black hover:scale-105 transition-transform" href="tel:0935365896">0935.365.896</a>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-slate-50 dark:bg-slate-900/50" id="he-thong-co-so">
+<div class="px-4 lg:px-10 flex justify-center">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<div class="text-center mb-16">
+<h2 class="text-slate-900 dark:text-white text-3xl font-black @[480px]:text-4xl mb-4 uppercase">Hệ Thống Cơ Sở</h2>
+<p class="text-slate-500 max-w-2xl mx-auto">Chọn chi nhánh gần nhất để xem bản đồ chỉ đường và liên hệ trực tiếp.</p>
+<div class="w-20 h-1.5 bg-primary mx-auto rounded-full mt-4"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-4 flex flex-col gap-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
+<a class="flex flex-col gap-2 p-5 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent hover:border-primary/50 focus:border-primary focus:bg-teal-50 dark:focus:bg-teal-900/20 transition-all cursor-pointer group shadow-sm" href="https://maps.google.com/maps?q=11%20L%C3%AA%20H%E1%BB%93ng%20Phong%2C%20An%20Nh%C6%A1n%2C%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" target="map-frame">
+<div class="flex items-center justify-between">
+<span class="text-xs font-black uppercase text-primary tracking-widest">Cơ sở 1</span>
+</div>
+<h3 class="text-lg font-bold uppercase">An Nhơn</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">11 Lê Hồng Phong - TX. An Nhơn, Bình Định</p>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-200 mt-1">SĐT: 0935 365 896</span>
+</a>
+<a class="flex flex-col gap-2 p-5 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent hover:border-primary/50 focus:border-primary focus:bg-teal-50 dark:focus:bg-teal-900/20 transition-all cursor-pointer group shadow-sm" href="https://maps.google.com/maps?q=433%20Quang%20Trung%2C%20TT.%20Ng%C3%B4%20M%C3%A2y%2C%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" target="map-frame">
+<div class="flex items-center justify-between">
+<span class="text-xs font-black uppercase text-primary tracking-widest">Cơ sở 2</span>
+</div>
+<h3 class="text-lg font-bold uppercase">Ngô Mây</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">433 Quang Trung - TT. Ngô Mây, Bình Định</p>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-200 mt-1">SĐT: 0346 223359</span>
+</a>
+<a class="flex flex-col gap-2 p-5 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent hover:border-primary/50 focus:border-primary focus:bg-teal-50 dark:focus:bg-teal-900/20 transition-all cursor-pointer group shadow-sm" href="https://maps.google.com/maps?q=55%20Tr%E1%BA%A7n%20Ph%C3%BA%2C%20TT.%20Di%C3%AAu%20tr%C3%AC%2C%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" target="map-frame">
+<div class="flex items-center justify-between">
+<span class="text-xs font-black uppercase text-primary tracking-widest">Cơ sở 3</span>
+</div>
+<h3 class="text-lg font-bold uppercase">Diêu Trì</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">55 Trần Phú - TT. Diêu trì, Bình Định</p>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-200 mt-1">SĐT: 0369 434 896</span>
+</a>
+<a class="flex flex-col gap-2 p-5 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent hover:border-primary/50 focus:border-primary focus:bg-teal-50 dark:focus:bg-teal-900/20 transition-all cursor-pointer group shadow-sm" href="https://maps.google.com/maps?q=252%20L%C3%AA%20Du%E1%BA%A9n%2C%20TT.%20%C4%90%E1%BA%ADp%20%C4%90%C3%A1%2C%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" target="map-frame">
+<div class="flex items-center justify-between">
+<span class="text-xs font-black uppercase text-primary tracking-widest">Cơ sở 4</span>
+</div>
+<h3 class="text-lg font-bold uppercase">Đập Đá</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">252 Lê Duẩn - TT. Đập Đá, Bình Định</p>
+<span class="text-sm font-bold text-slate-700 dark:text-slate-200 mt-1">SĐT: 03999 18 234</span>
+</a>
+</div>
+<div class="lg:col-span-8 h-[500px] lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800 bg-slate-200 relative">
+<iframe allowfullscreen="" class="w-full h-full border-0" loading="lazy" name="map-frame" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=11%20L%C3%AA%20H%E1%BB%93ng%20Phong%2C%20An%20Nh%C6%A1n%2C%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20" id="bac-si">
+<div class="px-4 lg:px-10 flex justify-center">
+<div class="layout-content-container flex flex-col max-w-[1200px] flex-1">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h2 class="text-slate-900 dark:text-white text-3xl font-black uppercase">Đội Ngũ Bác Sĩ</h2>
+<p class="text-slate-500 mt-2">Gặp gỡ những chuyên gia luôn hết lòng vì sức khỏe thú cưng.</p>
+<div class="w-20 h-1.5 bg-accent rounded-full mt-4"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="flex flex-col bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+<div class="w-full aspect-[4/5] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDc3OBYrccsLd_TMTQonBRYEHNI2sePo2_os7neObtqK6NS14KleGotYbN5ztZQWKxGWO7w58FJFA-lvyphKe4OoqO8VgwMeRRsF62-01SSzxdipy2YzrP932DnQEgUaQshycmsv8YOWe8sgVAsNcn8eBEd8HNvD1vjgki-VuabiukbFvTAD0wpFeOAq98HIZQajL3SbUrCu64c9U0EsX3qSWGu2TO5_5lkq6IxGNW6j8Xs3kZ6IAyQkMj73xLq3UWCg1kdlS21iGo");'></div>
+<div class="p-8">
+<h4 class="text-xl font-bold mb-1">Bác sĩ Quốc Tuấn</h4>
+<span class="text-primary text-xs font-black uppercase tracking-widest">Bác sĩ Phẫu thuật</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-4 leading-relaxed">Chuyên gia hàng đầu về các ca phẫu thuật ngoại khoa phức tạp và chấn thương chỉnh hình.</p>
+</div>
+</div>
+<div class="flex flex-col bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+<div class="w-full aspect-[4/5] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCITHF1dPzV4_K85Z5EqmC0Aq41iIaImt_Ohw1GXPZ8Yz7S2Oebm3pVArtzU3mwKpC2SXNikwM000wkmoLCVg-AMnY7uFN-V0DUom4VZfQm4ENSBSGYi-c4301ElvR3xcAkv0IigOGsY5NGoayLmAag2KV1qYi6W5PwDd0XfYtzznnI-bUqAzhcC1QO6ypa06-N2ukbU2t9-heRJov0VcO1hj3CbmFUocPeBN06t7QwGCcejs8l8hlNxm0JZK7fDwcGKCAoldl7wms");'></div>
+<div class="p-8">
+<h4 class="text-xl font-bold mb-1">Bác sĩ Minh Anh</h4>
+<span class="text-primary text-xs font-black uppercase tracking-widest">Chuyên gia Nội khoa</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-4 leading-relaxed">Với 10 năm kinh nghiệm trong chẩn đoán hình ảnh và điều trị các bệnh lý nội khoa nan y.</p>
+</div>
+</div>
+<div class="flex flex-col bg-white dark:bg-slate-800 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-slate-100 dark:border-slate-700">
+<div class="w-full aspect-[4/5] bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8noSFojm4YpFCdZqYeqiK1kqdm0N38qelNhiFG3kmplzT7W_0pEmL-lYdUC7BctZw8oMvdz0z70yKi9s5ljHfCGyjr7e2S8muIl2Otgq562BDBbKtU1teZuVG1VQsuLm58BvTLlBu4Fp6qX_uNVUyDdpUCfP-WByVS4V4v0VjajD0HoBlwojSbOTFKdi5VBZDXQYfNLRKknFYsSanniwkAXmeuel4lIYpvFt8MwppJr1JaRznm5fvtAFuUoZceMhS4naJrVoBDGw");'></div>
+<div class="p-8">
+<h4 class="text-xl font-bold mb-1">Bác sĩ Thu Thảo</h4>
+<span class="text-primary text-xs font-black uppercase tracking-widest">Chuyên gia Dinh dưỡng</span>
+<p class="text-slate-500 dark:text-slate-400 text-sm mt-4 leading-relaxed">Chuyên gia tư vấn chế độ dinh dưỡng khoa học và chăm sóc thú cưng giai đoạn phục hồi.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 pt-20 pb-10" id="lien-he">
+<div class="px-4 lg:px-10 flex flex-col items-center">
+<div class="layout-content-container flex flex-col max-w-[1200px] w-full">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col">
+<span class="text-xl font-black text-primary uppercase leading-tight">Hệ Thống Thú Y Thành Phát</span>
+<span class="text-[10px] text-accent font-bold tracking-[0.2em] uppercase">Chuyên nghiệp - Tận tâm</span>
+</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                                Hệ thống chăm sóc sức khỏe thú cưng uy tín hàng đầu tại Bình Định. Tận tâm chăm sóc, nâng niu sự sống là tôn chỉ hoạt động của chúng tôi.
+                            </p>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-lg font-black text-slate-900 dark:text-white uppercase tracking-wider">Thông Tin Hệ Thống</h3>
+<ul class="text-sm text-slate-500 dark:text-slate-400 flex flex-col gap-4">
+<li class="flex flex-col gap-1">
+<span class="font-bold text-slate-700 dark:text-slate-200">Giờ làm việc:</span>
+<span>Thứ 2 - Chủ Nhật: 08:00 - 20:00</span>
+</li>
+<li class="flex flex-col gap-1">
+<span class="font-bold text-red-600 uppercase">Hotline Cấp cứu (24/24):</span>
+<a class="font-black text-xl text-red-600" href="tel:0935365896">0935.365.896</a>
+</li>
+</ul>
+</div>
+<div class="flex flex-col gap-6 lg:col-span-2">
+<h3 class="text-lg font-black text-slate-900 dark:text-white uppercase tracking-wider">Hệ Thống Chi Nhánh</h3>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+<div class="flex flex-col text-sm">
+<span class="font-black text-primary uppercase">Cơ sở 1: An Nhơn</span>
+<span class="text-slate-500 dark:text-slate-400">11 Lê Hồng Phong - TX. An Nhơn</span>
+<a class="font-bold text-slate-700 dark:text-slate-200 hover:text-accent" href="tel:0935365896">SĐT: 0935 365 896</a>
+</div>
+<div class="flex flex-col text-sm">
+<span class="font-black text-primary uppercase">Cơ sở 2: Ngô Mây</span>
+<span class="text-slate-500 dark:text-slate-400">433 Quang Trung - TT. Ngô Mây</span>
+<a class="font-bold text-slate-700 dark:text-slate-200 hover:text-accent" href="tel:0346223359">SĐT: 0346 223359</a>
+</div>
+<div class="flex flex-col text-sm">
+<span class="font-black text-primary uppercase">Cơ sở 3: Diêu trì</span>
+<span class="text-slate-500 dark:text-slate-400">55 Trần Phú - TT. Diêu trì</span>
+<a class="font-bold text-slate-700 dark:text-slate-200 hover:text-accent" href="tel:0369434896">SĐT: 0369 434 896</a>
+</div>
+<div class="flex flex-col text-sm">
+<span class="font-black text-primary uppercase">Cơ sở 4: Đập Đá</span>
+<span class="text-slate-500 dark:text-slate-400">252 Lê Duẩn - TT. Đập Đá</span>
+<a class="font-bold text-slate-700 dark:text-slate-200 hover:text-accent" href="tel:0399918234">SĐT: 03999 18 234</a>
+</div>
+</div>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-xs text-slate-500 dark:text-slate-500 font-medium">© 2026 HỆ THỐNG THÚ Y THÀNH PHÁT. Bảo lưu mọi quyền.</p>
+<div class="marquee-footer flex-1 overflow-hidden relative h-6">
+<div class="marquee-content absolute left-0 top-0">
+<span class="text-xs text-slate-400">1 dự án của <a class="text-primary hover:underline font-bold" href="#" target="_blank">Tony Marketing</a> nhằm giúp các doanh nghiệp SMEs phát triển</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+</body></html>
