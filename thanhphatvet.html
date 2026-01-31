@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html class="light scroll-smooth" lang="vi">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>HỆ THỐNG THÚ Y THÀNH PHÁT - Chăm Sóc Thú Cưng Tận Tâm</title>
+    <meta name="description" content="Hệ thống Thú Y Thành Phát - Chuyên phẫu thuật, cấp cứu 24/24, triệt sản và spa thú cưng uy tín tại Bình Định.">
+    
+    <!-- Tối ưu tải Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#14b8a6",
+                        "accent": "#f97316",
+                        "background-light": "#f8fafc",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer base {
+            body { @apply antialiased text-slate-900 dark:text-slate-100 bg-background-light dark:bg-background-dark transition-colors duration-300; }
+        }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        
+        .emergency-pulse {
+            animation: pulse-red 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-red {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.7); }
+            50% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(220, 38, 38, 0); }
+        }
+
+        .marquee-footer { overflow: hidden; position: relative; width: 100%; }
+        .marquee-content {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marquee 25s linear infinite;
+            will-change: transform;
+        }
+        @keyframes marquee {
+            from { transform: translateX(50%); }
+            to { transform: translateX(-100%); }
+        }
+
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { @apply bg-slate-300 dark:bg-slate-700 rounded-full; }
+        
+        .header-glass {
+            @apply sticky top-0 z-50 backdrop-blur-md bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800;
+        }
+
+        .branch-card.active {
+            @apply border-primary bg-teal-50 dark:bg-teal-900/20 ring-1 ring-primary/50;
+        }
+
+        .doctor-card:hover img { transform: scale(1.05); }
+    </style>
+</head>
+<body>
+    <div class="flex flex-col min-h-screen">
+        <!-- Header -->
+        <header class="header-glass px-6 lg:px-10 py-3">
+            <div class="max-w-7xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="flex flex-col">
+                        <h2 class="text-primary text-lg lg:text-xl font-black leading-tight uppercase tracking-tight">Thành Phát Pet</h2>
+                        <span class="text-[9px] text-accent font-bold tracking-[0.2em] uppercase">Chuyên nghiệp - Tận tâm</span>
+                    </div>
+                </div>
+                
+                <div class="flex items-center gap-6">
+                    <nav class="hidden lg:flex items-center gap-8">
+                        <a class="text-sm font-bold hover:text-primary transition-colors" href="#">Trang chủ</a>
+                        <a class="text-sm font-bold hover:text-primary transition-colors" href="#dich-vu">Dịch vụ</a>
+                        <a class="text-sm font-bold hover:text-primary transition-colors" href="#he-thong-co-so">Cơ sở</a>
+                        <a class="text-sm font-bold hover:text-primary transition-colors" href="#bac-si">Đội ngũ</a>
+                    </nav>
+
+                    <div class="flex items-center gap-4">
+                        <button aria-label="Toggle Dark Mode" onclick="document.documentElement.classList.toggle('dark')" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+                            <span class="material-symbols-outlined dark:hidden">dark_mode</span>
+                            <span class="material-symbols-outlined hidden dark:block">light_mode</span>
+                        </button>
+                        <a class="emergency-pulse flex items-center gap-2 bg-red-600 text-white px-5 py-2 rounded-full text-xs font-black hover:bg-red-700 transition-all shadow-lg shadow-red-500/30" href="tel:0935365896">
+                            <span class="uppercase">CẤP CỨU 24/7</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32">
+                <div class="container mx-auto px-6">
+                    <div class="flex flex-col lg:flex-row items-center gap-12">
+                        <div class="lg:w-1/2 space-y-8 text-center lg:text-left">
+                            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-widest">
+                                <span class="relative flex h-2 w-2">
+                                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                                    <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                                </span>
+                                Hệ thống 4 cơ sở tại Bình Định
+                            </div>
+                            <h1 class="text-4xl md:text-6xl font-black leading-[1.1] tracking-tight">
+                                Chăm Sóc Thú Cưng <br/><span class="text-primary italic">Bằng Cả Trái Tim</span>
+                            </h1>
+                            <p class="text-slate-500 dark:text-slate-400 text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                                Đội ngũ bác sĩ giàu kinh nghiệm, trang thiết bị hiện đại hàng đầu. Chúng tôi không chỉ chữa bệnh, chúng tôi trao gửi yêu thương cho những người bạn nhỏ.
+                            </p>
+                            <div class="flex flex-wrap justify-center lg:justify-start gap-4">
+                                <a class="px-8 py-4 bg-primary text-white rounded-2xl font-bold shadow-xl shadow-teal-500/30 hover:-translate-y-1 transition-all" href="tel:0935365896">Đặt lịch ngay</a>
+                                <a class="px-8 py-4 bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 rounded-2xl font-bold hover:border-primary transition-all flex items-center gap-2" href="#he-thong-co-so">
+                                    Tìm cơ sở gần nhất
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/2 relative">
+                            <div class="absolute -top-10 -right-10 w-64 h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
+                            <img src="https://images.unsplash.com/photo-1644675272883-0c4d582528d8?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                                 alt="Thú y Thành Phát Hero" 
+                                 class="rounded-[2.5rem] shadow-2xl border-8 border-white dark:border-slate-800 w-full object-cover aspect-video relative z-10"
+                                 loading="eager">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dịch Vụ Chuyên Khoa -->
+            <section class="py-24 bg-slate-50 dark:bg-slate-900/30" id="dich-vu">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 space-y-4">
+                        <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Dịch Vụ Chuyên Khoa</h2>
+                        <p class="text-slate-500 max-w-2xl mx-auto leading-relaxed">Chúng tôi cung cấp các giải pháp y tế toàn diện với công nghệ hiện đại nhất dành cho thú cưng của bạn.</p>
+                        <div class="w-20 h-1.5 bg-accent mx-auto rounded-full"></div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:border-primary/30 transition-all group">
+                            <div class="w-14 h-14 rounded-2xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">child_care</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Phẫu Thuật Mổ Đẻ Thú Cưng</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">Hỗ trợ sinh sản an toàn, đảm bảo sức khỏe cho cả mẹ và con với quy trình vô trùng tuyệt đối.</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:border-primary/30 transition-all group">
+                            <div class="w-14 h-14 rounded-2xl bg-orange-50 dark:bg-orange-900/30 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">medical_services</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Phẫu Thuật Triệt Sản</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">Dịch vụ triệt sản thẩm mỹ, phục hồi nhanh chóng giúp giảm thiểu các bệnh lý nguy hiểm.</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:border-primary/30 transition-all group">
+                            <div class="w-14 h-14 rounded-2xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">orthopedics</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Phẫu Thuật Xương Khớp</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">Điều trị chấn thương chỉnh hình, đóng đinh nội tủy và các vấn đề về vận động chuyên sâu.</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:border-primary/30 transition-all group">
+                            <div class="w-14 h-14 rounded-2xl bg-orange-50 dark:bg-orange-900/30 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">brush</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Spa - Grooming Thú Cưng</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">Tắm vệ sinh, cắt tỉa lông thẩm mỹ theo yêu cầu, giúp thú cưng sạch sẽ và tự tin hơn.</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:border-primary/30 transition-all group">
+                            <div class="w-14 h-14 rounded-2xl bg-teal-50 dark:bg-teal-900/30 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">radar</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Siêu Âm Thú Cưng</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">Chẩn đoán hình ảnh chính xác các bệnh lý nội tạng, kiểm tra thai kỳ định kỳ.</p>
+                        </div>
+                        <div class="p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 hover:shadow-2xl hover:border-primary/30 transition-all group">
+                            <div class="w-14 h-14 rounded-2xl bg-orange-50 dark:bg-orange-900/30 flex items-center justify-center text-accent mb-6 group-hover:scale-110 transition-transform">
+                                <span class="material-symbols-outlined text-3xl">vaccines</span>
+                            </div>
+                            <h3 class="text-xl font-bold mb-3">Tiêm Phòng & Tẩy Giun</h3>
+                            <p class="text-slate-500 text-sm leading-relaxed">Đầy đủ các loại vaccine 5 bệnh, 7 bệnh và phòng dại chất lượng cao.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Đội Ngũ Bác Sĩ -->
+            <section class="py-24" id="bac-si">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 space-y-4">
+                        <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Đội Ngũ Bác Sĩ</h2>
+                        <p class="text-slate-500 max-w-xl mx-auto">Những chuyên gia tận tâm, giàu kinh nghiệm luôn hết lòng vì sức khỏe thú cưng.</p>
+                        <div class="w-20 h-1.5 bg-accent mx-auto rounded-full"></div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div class="doctor-card group bg-white dark:bg-slate-800 rounded-[2rem] overflow-hidden border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all">
+                            <div class="aspect-[4/5] overflow-hidden">
+                                <img src="https://i.ibb.co/m5Bf1kKY/Gemini-Generated-Image-b6mpi5b6mpi5b6mp.png" alt="Bác sĩ Quốc Tuấn" class="w-full h-full object-cover transition-transform duration-500" loading="lazy">
+                            </div>
+                            <div class="p-8 text-center">
+                                <h3 class="text-xl font-black mb-1">Bác sĩ Quốc Tuấn</h3>
+                                <span class="text-primary text-xs font-bold uppercase tracking-widest block mb-4">Chuyên gia Phẫu thuật</span>
+                                <p class="text-slate-500 text-sm leading-relaxed">Chuyên gia hàng đầu về các ca phẫu thuật ngoại khoa phức tạp và chấn thương chỉnh hình.</p>
+                            </div>
+                        </div>
+                        <div class="doctor-card group bg-white dark:bg-slate-800 rounded-[2rem] overflow-hidden border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all">
+                            <div class="aspect-[4/5] overflow-hidden">
+                                <img src="https://i.ibb.co/bjCR223p/Gemini-Generated-Image-ckm07fckm07fckm0.png" alt="Bác sĩ Minh Anh" class="w-full h-full object-cover transition-transform duration-500" loading="lazy">
+                            </div>
+                            <div class="p-8 text-center">
+                                <h3 class="text-xl font-black mb-1">Bác sĩ Minh Anh</h3>
+                                <span class="text-primary text-xs font-bold uppercase tracking-widest block mb-4">Chuyên gia Nội khoa</span>
+                                <p class="text-slate-500 text-sm leading-relaxed">Với 10 năm kinh nghiệm trong chẩn đoán hình ảnh và điều trị các bệnh lý nội khoa nan y.</p>
+                            </div>
+                        </div>
+                        <div class="doctor-card group bg-white dark:bg-slate-800 rounded-[2rem] overflow-hidden border border-slate-100 dark:border-slate-700 shadow-sm hover:shadow-2xl transition-all">
+                            <div class="aspect-[4/5] overflow-hidden">
+                                <img src="https://i.ibb.co/XrbWgZLQ/Gemini-Generated-Image-vcq4vbvcq4vbvcq4.png" alt="Bác sĩ Thu Thảo" class="w-full h-full object-cover transition-transform duration-500" loading="lazy">
+                            </div>
+                            <div class="p-8 text-center">
+                                <h3 class="text-xl font-black mb-1">Bác sĩ Thu Thảo</h3>
+                                <span class="text-primary text-xs font-bold uppercase tracking-widest block mb-4">Chuyên gia Dinh dưỡng</span>
+                                <p class="text-slate-500 text-sm leading-relaxed">Chuyên gia tư vấn chế độ dinh dưỡng khoa học và chăm sóc thú cưng giai đoạn phục hồi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cấp cứu Banner -->
+            <section class="bg-red-600 py-10">
+                <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6 text-white text-center md:text-left">
+                    <div class="flex items-center gap-5">
+                        <span class="material-symbols-outlined text-6xl opacity-80">e911_emergency</span>
+                        <div>
+                            <h2 class="text-2xl font-black uppercase tracking-tight">Cấp Cứu 24/24 - Hotline Khẩn Cấp</h2>
+                            <p class="text-red-100">Bác sĩ luôn trực sẵn sàng hỗ trợ mọi lúc mọi nơi.</p>
+                        </div>
+                    </div>
+                    <a href="tel:0935365896" class="text-4xl font-black tracking-tighter hover:scale-105 transition-transform">0935.365.896</a>
+                </div>
+            </section>
+
+            <!-- Hệ thống cơ sở -->
+            <section class="py-24 bg-slate-50 dark:bg-slate-900/30" id="he-thong-co-so">
+                <div class="container mx-auto px-6">
+                    <div class="text-center mb-16 space-y-4">
+                        <h2 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Hệ Thống Cơ Sở</h2>
+                        <div class="w-20 h-1.5 bg-primary mx-auto rounded-full"></div>
+                    </div>
+
+                    <div class="grid lg:grid-cols-12 gap-8 items-start">
+                        <div class="lg:col-span-4 space-y-4 max-h-[600px] overflow-y-auto pr-2 custom-scrollbar">
+                            <button onclick="changeMap(0)" class="branch-card active w-full text-left flex flex-col gap-2 p-5 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent transition-all shadow-sm">
+                                <span class="text-[10px] font-black uppercase text-primary tracking-widest">Cơ sở 1</span>
+                                <h3 class="font-bold uppercase">An Nhơn</h3>
+                                <p class="text-xs text-slate-500">11 Lê Hồng Phong - TX. An Nhơn, Bình Định</p>
+                                <span class="text-sm font-bold text-primary">SĐT: 0935 365 896</span>
+                            </button>
+                            <button onclick="changeMap(1)" class="branch-card w-full text-left flex flex-col gap-2 p-5 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent transition-all shadow-sm">
+                                <span class="text-[10px] font-black uppercase text-primary tracking-widest">Cơ sở 2</span>
+                                <h3 class="font-bold uppercase">Ngô Mây</h3>
+                                <p class="text-xs text-slate-500">433 Quang Trung - TT. Ngô Mây, Bình Định</p>
+                                <span class="text-sm font-bold text-primary">SĐT: 0346 223 359</span>
+                            </button>
+                            <button onclick="changeMap(2)" class="branch-card w-full text-left flex flex-col gap-2 p-5 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent transition-all shadow-sm">
+                                <span class="text-[10px] font-black uppercase text-primary tracking-widest">Cơ sở 3</span>
+                                <h3 class="font-bold uppercase">Diêu Trì</h3>
+                                <p class="text-xs text-slate-500">55 Trần Phú - TT. Diêu trì, Bình Định</p>
+                                <span class="text-sm font-bold text-primary">SĐT: 0369 434 896</span>
+                            </button>
+                            <button onclick="changeMap(3)" class="branch-card w-full text-left flex flex-col gap-2 p-5 bg-white dark:bg-slate-800 rounded-2xl border-2 border-transparent transition-all shadow-sm">
+                                <span class="text-[10px] font-black uppercase text-primary tracking-widest">Cơ sở 4</span>
+                                <h3 class="font-bold uppercase">Đập Đá</h3>
+                                <p class="text-xs text-slate-500">252 Lê Duẩn - TT. Đập Đá, Bình Định</p>
+                                <span class="text-sm font-bold text-primary">SĐT: 0399 918 234</span>
+                            </button>
+                        </div>
+                        
+                        <div class="lg:col-span-8 h-[500px] lg:h-[600px] rounded-3xl overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl relative bg-slate-200">
+                            <div id="map-loader" class="absolute inset-0 flex items-center justify-center bg-slate-100 dark:bg-slate-800 z-10 hidden">
+                                <div class="animate-spin rounded-full h-12 w-12 border-4 border-primary border-t-transparent"></div>
+                            </div>
+                            <iframe id="main-map" src="https://maps.google.com/maps?q=11%20L%C3%AA%20H%E1%BB%93ng%20Phong%2C%20An%20Nh%C6%A1n%2C%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh&t=&z=15&ie=UTF8&iwloc=&output=embed" class="w-full h-full border-0" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-white dark:bg-slate-900 pt-16 pb-8 border-t border-slate-100 dark:border-slate-800">
+            <div class="container mx-auto px-6">
+                <!-- Main Footer Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-10 mb-12">
+                    <!-- Col 1: Brand -->
+                    <div class="space-y-4">
+                        <h2 class="text-xl font-black text-primary uppercase leading-tight">Hệ Thống Thú Y Thành Phát</h2>
+                        <span class="block text-xs font-bold text-accent uppercase tracking-[0.2em]">Chuyên nghiệp - Tận tâm</span>
+                        <p class="text-sm text-slate-500 leading-relaxed pt-2">
+                            Hệ thống chăm sóc sức khỏe thú cưng uy tín hàng đầu tại Bình Định. Tận tâm chăm sóc, nâng niu sự sống là tôn chỉ hoạt động của chúng tôi.
+                        </p>
+                    </div>
+
+                    <!-- Col 2: System Info -->
+                    <div class="space-y-6">
+                        <h3 class="text-lg font-black uppercase tracking-tight">Thông Tin Hệ Thống</h3>
+                        <div class="space-y-2">
+                            <p class="text-sm font-bold">Giờ làm việc:</p>
+                            <p class="text-sm text-slate-500">Thứ 2 - Chủ Nhật: 08:00 - 20:00</p>
+                        </div>
+                        <div class="space-y-2 pt-2">
+                            <p class="text-sm font-bold text-red-600 uppercase">Hotline Cấp Cứu (24/24):</p>
+                            <a href="tel:0935365896" class="text-3xl font-black text-red-600 tracking-tighter">0935.365.896</a>
+                        </div>
+                    </div>
+
+                    <!-- Col 3: Branches 1 & 3 -->
+                    <div class="space-y-6">
+                        <h3 class="text-lg font-black uppercase tracking-tight">Hệ Thống Chi Nhánh</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-xs font-black text-primary uppercase mb-1">Cơ sở 1: An Nhơn</p>
+                                <p class="text-[13px] text-slate-500">11 Lê Hồng Phong - TX. An Nhơn</p>
+                                <p class="text-sm font-bold">SĐT: 0935 365 896</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-black text-primary uppercase mb-1">Cơ sở 3: Diêu Trì</p>
+                                <p class="text-[13px] text-slate-500">55 Trần Phú - TT. Diêu trì</p>
+                                <p class="text-sm font-bold">SĐT: 0369 434 896</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Col 4: Branches 2 & 4 -->
+                    <div class="space-y-6 lg:pt-11"> <!-- Align with heading of Col 3 -->
+                        <div class="space-y-4">
+                            <div>
+                                <p class="text-xs font-black text-primary uppercase mb-1">Cơ sở 2: Ngô Mây</p>
+                                <p class="text-[13px] text-slate-500">433 Quang Trung - TT. Ngô Mây</p>
+                                <p class="text-sm font-bold">SĐT: 0346 223 359</p>
+                            </div>
+                            <div>
+                                <p class="text-xs font-black text-primary uppercase mb-1">Cơ sở 4: Đập Đá</p>
+                                <p class="text-[13px] text-slate-500">252 Lê Duẩn - TT. Đập Đá</p>
+                                <p class="text-sm font-bold">SĐT: 03999 18 234</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bottom Bar -->
+                <div class="pt-8 border-t border-slate-100 dark:border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4">
+                    <p class="text-[10px] text-slate-400">© 2026 HỆ THỐNG THÚ Y THÀNH PHÁT. Bảo lưu mọi quyền.</p>
+                    <div class="marquee-footer flex-1">
+                        <div class="marquee-content text-[10px] text-slate-400">
+                            Phát triển bởi <span class="text-primary font-bold">Tony Marketing</span> - Đồng hành cùng sự phát triển của doanh nghiệp SMEs Bình Định
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const maps = [
+            "https://maps.google.com/maps?q=11%20L%C3%AA%20H%E1%BB%93ng%20Phong%2C%20An%20Nh%C6%A1n%2C%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh&t=&z=15&ie=UTF8&iwloc=&output=embed",
+            "https://maps.google.com/maps?q=433%20Quang%20Trung%2C%20TT.%20Ng%C3%B4%20M%C3%A2y%2C%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh&t=&z=15&ie=UTF8&iwloc=&output=embed",
+            "https://maps.google.com/maps?q=55%20Tr%E1%BA%A7n%20Ph%C3%BA%2C%20TT.%20Di%C3%AAu%20tr%C3%AC%2C%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh&t=&z=15&ie=UTF8&iwloc=&output=embed",
+            "https://maps.google.com/maps?q=252%20L%C3%AA%20Du%E1%BA%A9n%2C%20TT.%20%C4%90%E1%BA%ADp%20%C4%90%C3%A1%2C%20B%C3%ACnh%20%C4%90%E1%BB%8Bnh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+        ];
+
+        function changeMap(index) {
+            const iframe = document.getElementById('main-map');
+            const loader = document.getElementById('map-loader');
+            const cards = document.querySelectorAll('.branch-card');
+
+            loader.classList.remove('hidden');
+            iframe.src = maps[index];
+            
+            cards.forEach((card, i) => {
+                if(i === index) card.classList.add('active');
+                else card.classList.remove('active');
+            });
+
+            iframe.onload = () => {
+                loader.classList.add('hidden');
+            };
+        }
+    </script>
+</body>
+</html>
